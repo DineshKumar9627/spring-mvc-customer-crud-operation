@@ -20,12 +20,12 @@
         </thead>
         <tbody>
             <tr th:each="customer : ${customers}">
-                <td th:text="${customer.getId}"></td>
-                <td th:text="${customer.getFirstName}"></td>
-                <td th:text="${customer.getLastName}"></td>
-                <td th:text="${customer.getEmail}"></td>
-                <td th:text="${customer.getMobile}"></td>
-                <td th:text="${customer.getGender}"></td>
+                <td th:text="${customer.id}"></td>
+                <td th:text="${customer.firstName}"></td>
+                <td th:text="${customer.lastName}"></td>
+                <td th:text="${customer.email}"></td>
+                <td th:text="${customer.mobile}"></td>
+                <td th:text="${customer.gender}"></td>
                 <td>
                     <button><a th:href="@{/customers/{id} (id=${customer.id})}">Update</a></button>
                     <button><a th:href="@{/customer/delete/{id} (id=${customer.id})}">Delete</a>.</button>

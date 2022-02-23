@@ -7,7 +7,7 @@
 <body>
     <form th:action="@{/customers}" th:object="${customer}" method="post">
         <table>
-            <tr>
+            <tr th:if="${customer.id}">
                 <td>
                     <input type="text" th:field="*{id}" readonly>
                 </td>
@@ -34,7 +34,9 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" th:field="*{gender}" placeholder="Gender">
+                    Gender:
+                    <input type="radio" th:field="*{gender}" value="Male" />Male
+                    <input type="radio" th:field="*{gender}" value="Female" />Female
                 </td>
             </tr>
             <tr>
